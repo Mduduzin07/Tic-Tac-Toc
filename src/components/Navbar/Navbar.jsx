@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate()
   return (
     <div className="navbar bg-base-100 shadow-lg">
       <div className="flex-1">

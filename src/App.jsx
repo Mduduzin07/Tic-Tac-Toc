@@ -1,19 +1,18 @@
-import React from "react";
-import Game from "./components/Game/Game";
-import Home from "./components/Home/Home";
-import Navbar from "./components/Navbar/Navbar";
-import { Routes, Route } from "react-router-dom";
+import React, { useContext } from "react";
+import Router from "./Router.jsx";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "./styles/Global.styled";
+import { lightTheme, darkTheme } from "./styles/theme";
+import { ThemeContext } from "./contexts/ThemeContext.jsx";
 
 const App = () => {
+  const { theme } = useContext(ThemeContext);
+  const mode = (theme === "light" ? lightTheme : darkTheme)
   return (
-    <div className="bg-slate-400 min-h-screen">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/game" element={<Game />} />
-      </Routes>
-    </div>
-    // <div className="min-h-screen bg-slate-500 text-gray-800">My App</div>
+    <ThemeProvider theme={mode}>
+      <GlobalStyle />
+      <Router />
+    </ThemeProvider>
   );
 };
 

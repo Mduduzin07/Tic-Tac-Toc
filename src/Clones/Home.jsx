@@ -16,9 +16,11 @@ const Home = () => {
         {/* Play Button */}
         <div className="mb-8">
           <Link to="/game">
-            <button className="btn btn-primary btn-lg text-lg px-8 py-4 h-auto
+            <button
+              className="btn btn-primary btn-lg text-lg px-8 py-4 h-auto
              bg-slate-600 hover:text-slate-600 hover:bg-white transition-all
-             duration-300 ease-in-out transform hover:scale-105 hover:shadow-md">
+             duration-300 ease-in-out transform hover:scale-105 hover:shadow-md"
+            >
               🎮 Play Game
             </button>
           </Link>

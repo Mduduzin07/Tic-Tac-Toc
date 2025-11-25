@@ -260,7 +260,10 @@ const Game = () => {
 
         {/* Game Controls */}
         <div className="flex gap-3">
-          <button className="btn btn-secondary flex-1 bg-slate-500" onClick={resetGame}>
+          <button
+            className="btn btn-secondary flex-1 bg-slate-500"
+            onClick={resetGame}
+          >
             Reset Game
           </button>
           <Link to="/" className="btn btn-outline flex-1 bg-slate-500">
@@ -268,7 +271,6 @@ const Game = () => {
           </Link>
         </div>
 
-        
         {/* Difficulty Info */}
         {/* <div className="mt-6 p-4 bg-gray-50 rounded-lg">
           <h3 className="font-semibold text-gray-800 mb-2">
